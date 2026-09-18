@@ -1,0 +1,43 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;background:#12070b;color:white;overflow-x:hidden}
+.background{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 20%,#5e1629 0%,transparent 35%),radial-gradient(circle at 80% 80%,#42101e 0%,transparent 35%),linear-gradient(135deg,#12070b,#260b14)}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;opacity:.7;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.4)}}
+.music-button{position:fixed;top:20px;right:20px;z-index:100;border:1px solid #ffffff4d;background:#00000073;color:white;padding:12px 18px;border-radius:50px;cursor:pointer;backdrop-filter:blur(10px)}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:30px}
+.hero-content{max-width:850px;animation:fadeUp 1.5s ease}
+.small-text{letter-spacing:4px;text-transform:uppercase;color:#f3a8b9;font-size:14px;margin-bottom:20px}
+h1{font-size:clamp(50px,10vw,100px);margin-bottom:20px;text-shadow:0 0 30px #ff648066}
+.hero-heart{font-size:75px;animation:heartbeat 1.2s infinite;display:inline-block;margin-bottom:15px}
+.hero p{font-size:21px;line-height:1.8;color:#f5dfe5}
+section{padding:100px 25px;max-width:1000px;margin:auto}
+.section-title{text-align:center;font-size:40px;margin-bottom:45px;color:#ffb6c7}
+.photo-container{text-align:center}
+.photo-container img{width:min(90%,550px);height:500px;object-fit:cover;border-radius:30px;border:3px solid #ffb4c866;box-shadow:0 20px 60px #0009,0 0 40px #ff508026}
+.photo-caption{margin-top:20px;color:#e9c7cf;font-size:18px}
+.letter{background:#ffffff0f;border:1px solid #ffffff26;border-radius:30px;padding:45px;line-height:2;font-size:19px;color:#f6e6ea;backdrop-filter:blur(12px);box-shadow:0 20px 60px #0000004d}
+.letter p{margin-bottom:20px}.letter .dear{color:#ffb6c7;font-size:25px}
+.promises{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.promise{padding:30px;text-align:center;border-radius:25px;background:#ffffff0f;border:1px solid #ffffff1a;transition:.3s}
+.promise:hover{transform:translateY(-7px);background:#ffffff1a}
+.promise-icon{font-size:40px;margin-bottom:15px}.promise h3{color:#ffb6c7;margin-bottom:10px}.promise p{color:#e5cbd1;line-height:1.6}
+.forgive-section{text-align:center;min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.question-heart{font-size:90px;animation:heartbeat 1.3s infinite;margin-bottom:25px}
+.question{font-size:clamp(40px,8vw,75px);margin-bottom:20px}
+.question-subtitle{color:#e8cdd4;font-size:20px;max-width:650px;line-height:1.7;margin-bottom:35px}
+.buttons{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+button{border:none;cursor:pointer;font-family:inherit;transition:.3s}
+.forgive-button{padding:18px 35px;border-radius:50px;background:#e84c78;color:white;font-size:19px;box-shadow:0 10px 30px #e84c784d}
+.forgive-button:hover{transform:scale(1.08)}
+.time-button{padding:18px 30px;border-radius:50px;background:transparent;color:#f3ccd6;border:1px solid #8d5362;font-size:17px}
+.time-button:hover{background:#ffffff14}
+#response{display:none;margin-top:40px;max-width:650px;padding:35px;border-radius:25px;background:#ffffff14;border:1px solid #ffffff33;animation:fadeUp .8s ease}
+#response h2{color:#ffb6c7;font-size:32px;margin-bottom:15px}#response p{color:#f0dce1;font-size:18px;line-height:1.8}
+footer{text-align:center;padding:50px 20px;color:#b98d98;line-height:1.8}footer strong{color:#ffb6c7}
+.floating-heart{position:fixed;bottom:-50px;pointer-events:none;z-index:50;animation:floatUp linear forwards}
+@keyframes floatUp{from{transform:translateY(0) rotate(0deg);opacity:0}15%{opacity:1}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){section{padding:75px 18px}.letter{padding:28px 22px;font-size:17px}.promises{grid-template-columns:1fr}.photo-container img{height:400px}.music-button{top:12px;right:12px;font-size:13px}}
